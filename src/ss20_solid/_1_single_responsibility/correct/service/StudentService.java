@@ -17,4 +17,14 @@ public class StudentService {
         // Write file
         WriteFileUtil.writeFile(students);
     }
+
+    private static void edit() throws IOException {
+        List<Student> students = ReadFileUtil.readFile();
+
+        // Cho người dùng nhập vào
+        students.add(new Student(3, "Trường", 1.5));
+
+        // Write file
+        WriteFileUtil.writeFile(students);
+    }
 }
